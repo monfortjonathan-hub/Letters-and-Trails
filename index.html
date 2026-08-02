@@ -124,7 +124,7 @@
   <div id="resModal">
     <div id="resModalHeader">
       <span id="resModalTitle">Resource</span>
-      <button id="resModalClose">Close ✕</button>
+      <button id="resModalClose" type="button" onclick="closeResourceModal()">Close ✕</button>
     </div>
     <div id="resModalBody">
       <iframe id="resModalIframe" src="about:blank"></iframe>
@@ -375,6 +375,10 @@ updateMarkerStyles(-1);
 dateLabel.textContent = fmtDate(travelPoints[0].date) + "  \u2014  " + travelPoints[0].place_name;
 
 // ---- Resource sub-window modal ----
+function closeResourceModal() {
+  document.getElementById('resModalOverlay').style.display = 'none';
+  document.getElementById('resModalIframe').src = 'about:blank';
+}
 function openResource(url, title) {
   document.getElementById('resModalTitle').textContent = title || 'Resource';
   document.getElementById('resModalFallback').style.display = 'none';
@@ -391,14 +395,13 @@ function openResource(url, title) {
     } catch(e) {}
   }, 1500);
 }
-document.getElementById('resModalClose').addEventListener('click', () => {
-  document.getElementById('resModalOverlay').style.display = 'none';
-  document.getElementById('resModalIframe').src = 'about:blank';
-});
+document.getElementById('resModalClose').addEventListener('click', closeResourceModal);
 document.getElementById('resModalOverlay').addEventListener('click', (e) => {
-  if (e.target.id === 'resModalOverlay') {
-    document.getElementById('resModalOverlay').style.display = 'none';
-    document.getElementById('resModalIframe').src = 'about:blank';
+  if (e.target.id === 'resModalOverlay') closeResourceModal();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && document.getElementById('resModalOverlay').style.display === 'flex') {
+    closeResourceModal();
   }
 });
 </script>
