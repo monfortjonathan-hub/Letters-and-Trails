@@ -57,7 +57,10 @@
     "quote": "We heared a report Here yesterday which cast a gloom over our camp. it was that our reg had been in an Engagement & were all killed but 200 & the rest taken prisoners. This is a base lie.",
     "source_note": "\"Laurel Hill July 8 [1861].\" Source: Dyer's Compendium, 6th Regiment Ohio Infantry, 3 years (ohiocivilwar.com/cw6.html). Quote: ERM to his parents, \"Laurel Hill Va July 10\" 1861, Hanover College Monfort letters transcript (history.hanover.edu/texts/HC/Monfort-all.html)",
     "nps_unit": null,
-    "pending_source": false
+    "pending_source": false,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Laurel_Mountain_(West_Virginia)",
+    "battlefield_url": "http://battleoflaurelhill.org/history.html",
+    "battlefield_site_note": "No NPS unit; the City of Belington owns ~50 acres of the camp/battlefield, interpreted by a local nonprofit. No dedicated 'Battle of Laurel Hill' Wikipedia article exists — linked to the Laurel Mountain (West Virginia) article, which covers the action. ERM was still in the 6th Ohio at this date, before his October 1861 transfer to the 75th; no regiment-specific position source applies."
   },
   {
     "date": "1861-07-13",
@@ -69,7 +72,10 @@
     "quote": null,
     "source_note": "\"Carrick's Ford July 13 [1861]. Pursuit of Garnett's forces July 15-16.\" Source: Dyer's Compendium, 6th Regiment Ohio Infantry, 3 years (ohiocivilwar.com/cw6.html)",
     "nps_unit": null,
-    "pending_source": false
+    "pending_source": false,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Corrick's_Ford",
+    "battlefield_url": "https://www.battlefields.org/visit/battlefields/corricks-ford-battlefield",
+    "battlefield_site_note": "No NPS unit; ~26 acres preserved by the American Battlefield Trust. ERM was still in the 6th Ohio at this date; no regiment-specific position source applies."
   },
   {
     "date": "1861-07-16/1861-08-06",
@@ -105,7 +111,10 @@
     "quote": null,
     "source_note": "\"Operations on Cheat Mountain against Lee September 11-17. Cheat Mountain Pass September 12 [1861].\" Source: Dyer's Compendium, 6th Regiment Ohio Infantry, 3 years (ohiocivilwar.com/cw6.html)",
     "nps_unit": null,
-    "pending_source": false
+    "pending_source": false,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Cheat_Mountain",
+    "battlefield_url": "https://www.battlefields.org/visit/heritage-sites/cheat-summit-fort",
+    "battlefield_site_note": "Site (Cheat Summit Fort) is on National Register of Historic Places land administered by the U.S. Forest Service, Monongahela National Forest — not NPS; American Battlefield Trust maintains a heritage-site page. ERM was still in the 6th Ohio at this date; no regiment-specific position source applies."
   },
   {
     "date": "1861-09-26/1861-09-29",
@@ -297,7 +306,11 @@
     "quote": null,
     "source_note": "\"Battle of McDowell May 8 [1862].\" The 75th Ohio lost 87 men. Source: Dyer's Compendium / NPS Battle Unit record, 75th Regiment, Ohio Infantry (nps.gov/civilwar UOH0075RI; ohiocivilwar.com/cw75.html); Wikipedia, \"75th Ohio Infantry Regiment.\" The McDowell battlefield lies inside the Shenandoah Valley Battlefields National Historic District but is not a National Park Service unit.",
     "nps_unit": null,
-    "pending_source": false
+    "pending_source": false,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_McDowell",
+    "battlefield_url": "https://www.battlefields.org/visit/battlefields/mcdowell-battlefield",
+    "battlefield_site_note": "No NPS unit; 583+ acres preserved by the American Battlefield Trust (with a hiking trail), plus additional land held by the Shenandoah Valley Battlefields Foundation.",
+    "unit_position_source": "American Battlefield Trust troop-position map: https://www.battlefields.org/learn/maps/mcdowell-may-8-1862 — shows the 75th Ohio in Milroy's brigade (with 25th Ohio, 32nd Ohio, 3rd West Virginia) on Sitlington's Hill. Order of battle: https://en.wikipedia.org/wiki/Battle_of_McDowell_order_of_battle:_Union"
   },
   {
     "date": "1862-05-10/1862-05-12",
@@ -357,7 +370,9 @@
     "quote": "there we engage the enimy & drove them back taking a great many prisoners & one piec of cannon.",
     "source_note": "\"Strasburg and Staunton Road June 1-2 [1862].\" Source: Dyer's Compendium / NPS Battle Unit record, 75th Regiment, Ohio Infantry (nps.gov/civilwar UOH0075RI; ohiocivilwar.com/cw75.html). Quote: ERM, 12 June 1862, Hanover College Monfort letters transcript (history.hanover.edu/texts/HC/Monfort-all.html)",
     "nps_unit": null,
-    "pending_source": false
+    "pending_source": false,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Jackson's_Valley_campaign",
+    "battlefield_site_note": "No dedicated 'Battle of Strasburg' Wikipedia article exists for this date and no preserved battlefield site — this was Jackson's escape march up the Valley Pike evading Fremont and Shields, not a distinct pitched battle. Linked to the broader Valley Campaign article for context."
   },
   {
     "date": "1862-06-03",
@@ -405,7 +420,11 @@
     "quote": "hearing that then [Ewell] had made a stand 5 miles farther on at a place called Cross Keys we pushed on & attacked them & fought them all day sunday the 8th",
     "source_note": "\"Battle of Cross Keys June 8 [1862].\" Source: Dyer's Compendium / NPS Battle Unit record, 75th Regiment, Ohio Infantry (nps.gov/civilwar UOH0075RI; ohiocivilwar.com/cw75.html). Quote: ERM to his sister, 12 June 1862, Hanover College Monfort letters transcript (history.hanover.edu/texts/HC/Monfort-all.html). Cross Keys battlefield lies inside the Shenandoah Valley Battlefields National Historic District but is not a National Park Service unit.",
     "nps_unit": null,
-    "pending_source": false
+    "pending_source": false,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Cross_Keys",
+    "battlefield_url": "https://www.shenandoahatwar.org/cross-keys-battlefield",
+    "battlefield_site_note": "Part of the Shenandoah Valley Battlefields National Historic District (NPS-affiliated heritage area, not a standalone NPS park unit: https://www.nps.gov/places/shenandoah-valley-battlefields-national-historic-district.htm ); on-the-ground trail and preservation managed by the Shenandoah Valley Battlefields Foundation.",
+    "unit_position_source": "Order of battle: https://en.wikipedia.org/wiki/Battle_of_Cross_Keys_order_of_battle:_Union — lists 75th Ohio, Col. Nathaniel McLean, under Fremont's command (with 32nd/55th/73rd/82nd Ohio). No dedicated troop-position map for the regiment specifically was found."
   },
   {
     "date": "1862-06-09",
@@ -489,7 +508,10 @@
     "quote": null,
     "source_note": "\"Battle of Cedar Mountain August 9 [1862]\" is listed in the regiment's service record; McLean's brigade was in the supporting line rather than the main assault, so ERM's personal exposure is not certain. Source: Dyer's Compendium / NPS Battle Unit record, 75th Regiment, Ohio Infantry (nps.gov/civilwar UOH0075RI; ohiocivilwar.com/cw75.html). Cedar Mountain Battlefield is managed by Friends of Cedar Mountain Battlefield / Virginia DCR, not the National Park Service.",
     "nps_unit": null,
-    "pending_source": false
+    "pending_source": false,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Cedar_Mountain",
+    "battlefield_url": "https://www.dcr.virginia.gov/state-parks/culpeper-battlefields",
+    "battlefield_site_note": "Land owned by Virginia DCR as part of Culpeper Battlefields State Park; day-to-day interpretation by the nonprofit Friends of Cedar Mountain Battlefield (https://www.cedarmountainbattlefield.com/). NOTE: the 75th Ohio's own standard engagement list (McDowell, Cross Keys, 2nd Bull Run, South Mountain, Chancellorsville, Gettysburg, Battery Wagner, Gainesville) does not include Cedar Mountain by name — consistent with the existing source_note that McLean's brigade was in a supporting line rather than the main assault. Flagged for further verification against primary muster records."
   },
   {
     "date": "1862-08-16/1862-08-21",
@@ -513,7 +535,9 @@
     "quote": null,
     "source_note": "\"Freeman's Ford August 22 [1862].\" Source: Dyer's Compendium / NPS Battle Unit record, 75th Regiment, Ohio Infantry (nps.gov/civilwar UOH0075RI; ohiocivilwar.com/cw75.html); see also D. B. Morrow, \"In Western Virginia... the 75th Ohio Lost Heavily at Freeman's Ford and Second Bull Run,\" National Tribune, 14 Aug. 1913.",
     "nps_unit": null,
-    "pending_source": false
+    "pending_source": false,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/First_Battle_of_Rappahannock_Station",
+    "battlefield_site_note": "No dedicated Wikipedia article or preserved site; Freeman's Ford is treated as part of the Aug. 22-25, 1862 series of actions (with Waterloo Bridge, Lee Springs, Sulphur Springs) covered together in the First Battle of Rappahannock Station article."
   },
   {
     "date": "1862-08-29/1862-08-30",
@@ -525,7 +549,10 @@
     "quote": null,
     "source_note": "\"Battle of Bull Run August 29-30 [1862].\" The 75th Ohio lost 113 men and its colors were riddled with ninety balls. Source: Dyer's Compendium / NPS Battle Unit record, 75th Regiment, Ohio Infantry (nps.gov/civilwar UOH0075RI; ohiocivilwar.com/cw75.html); Whitelaw Reid, Ohio in the War; E. R. Monfort, \"The 75th Ohio at Bull Run,\" National Tribune, 15 March 1917.",
     "nps_unit": "Manassas National Battlefield Park",
-    "pending_source": false
+    "pending_source": false,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Second_Battle_of_Bull_Run",
+    "battlefield_url": "https://www.nps.gov/mana/index.htm",
+    "unit_position_source": "Order of battle: https://en.wikipedia.org/wiki/Second_Battle_of_Bull_Run_order_of_battle:_Union — 75th Ohio in Col. Nathaniel C. McLean's 2nd Brigade, Schenck's/Stahel's Division, Sigel's I Corps, Army of Virginia, fighting on Chinn Ridge alongside the 25th, 55th, and 73rd Ohio (regiment lost 113 men). Narrative: HistoryNet, \"Stand to it, Boys\": A Buckeye brigade's bravado on Chinn Ridge, https://historynet.com/buckeye-brigade-chinn-ridge.htm"
   },
   {
     "date": "1862-09-01",
@@ -537,7 +564,10 @@
     "quote": null,
     "source_note": "Dyer's does not name Chantilly separately for the 75th Ohio; it is covered by \"Pope's Campaign in Northern Virginia August 16-September 2, [1862],\" which spans the 1 Sept. action at Ox Hill during the army's withdrawal to Fairfax Court House. Confidence marked medium for that reason. Source: Dyer's Compendium / NPS Battle Unit record, 75th Regiment, Ohio Infantry (nps.gov/civilwar UOH0075RI; ohiocivilwar.com/cw75.html). Today the site is Ox Hill Battlefield Park, a Fairfax County park, not a National Park Service unit.",
     "nps_unit": null,
-    "pending_source": false
+    "pending_source": false,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Chantilly",
+    "battlefield_url": "https://www.fairfaxcounty.gov/parks/ox-hill",
+    "battlefield_site_note": "Today preserved as Ox Hill Battlefield Park, a Fairfax County park (4134 West Ox Road, Fairfax, Va.) — not an NPS unit."
   },
   {
     "date": "1862-09-03/1862-09-24",
@@ -691,9 +721,12 @@
     "category": "battle",
     "confidence": "high",
     "quote": "where occurred one of the most desparate fights of the war where in 15 minutes we lost 6 commissioned officers Col Reily wound & prisoner Adjt Gano missing Capt Morey & Capt Watkins wounded & in the hands of the Enimy",
-    "source_note": "\"Battle of Chancellorsville May 1-5 [1863].\" The 75th Ohio, in Ames'/McLean's brigade of the XI Corps, stood and fired for about ten minutes against Jackson's flank attack on 2 May; Col. Robert Reily was killed and about 150 of the regiment were killed or wounded. Sources: Dyer's Compendium / NPS Battle Unit record, 75th Regiment, Ohio Infantry (nps.gov/civilwar UOH0075RI; ohiocivilwar.com/cw75.html); Wikipedia, \"75th Ohio Infantry Regiment\"; E. R. Monfort, \"The First Division, Eleventh Corps, at Chancellorsville\" (G.A.R. War Papers, 1891). Quote: ERM to his sister, 8 May 1863, Hanover College Monfort letters transcript (history.hanover.edu/texts/HC/Monfort-all.html)",
+    "source_note": "\"Battle of Chancellorsville May 1-5 [1863].\" The 75th Ohio, in McLean's brigade of the XI Corps, stood and fired for about ten minutes against Jackson's flank attack on 2 May; Col. Robert Reily was killed and about 150 of the regiment were killed or wounded. Sources: Dyer's Compendium / NPS Battle Unit record, 75th Regiment, Ohio Infantry (nps.gov/civilwar UOH0075RI; ohiocivilwar.com/cw75.html); Wikipedia, \"75th Ohio Infantry Regiment\"; E. R. Monfort, \"The First Division, Eleventh Corps, at Chancellorsville\" (G.A.R. War Papers, 1891). Quote: ERM to his sister, 8 May 1863, Hanover College Monfort letters transcript (history.hanover.edu/texts/HC/Monfort-all.html)",
     "nps_unit": "Fredericksburg and Spotsylvania National Military Park",
-    "pending_source": false
+    "pending_source": false,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Chancellorsville",
+    "battlefield_url": "https://www.nps.gov/frsp/planyourvisit/chancellorsvillebattlefield.htm",
+    "unit_position_source": "NPS order-of-battle page naming the regiment directly: https://www.nps.gov/frsp/learn/historyculture/order-of-battle-chancellorsville-11th-corps.htm (75th Ohio, 2nd Brigade [Col. Robert Reily, killed 2 May], 1st Division, XI Corps). American Battlefield Trust troop-position map of Jackson's flank attack: https://www.battlefields.org/learn/maps/chancellorsville-jacksons-flank-attack-may-2-1863"
   },
   {
     "date": "1863-05-06/1863-06-11",
@@ -753,7 +786,11 @@
     "quote": null,
     "source_note": "The 75th Ohio arrived with the XI Corps mid-day 1 July 1863 and took position on Blocher's Knoll in Barlow's division; the salient was overwhelmed by Doles' and Gordon's brigades and the regiment withdrew through the town to Cemetery Hill. Sources: Dyer's Compendium / NPS Battle Unit record, 75th Regiment, Ohio Infantry (nps.gov/civilwar UOH0075RI; ohiocivilwar.com/cw75.html); Wikipedia, \"75th Ohio Infantry Regiment\"; monuments of the 25th & 75th Ohio on East Howard Avenue.",
     "nps_unit": "Gettysburg National Military Park",
-    "pending_source": false
+    "pending_source": false,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Gettysburg,_First_Day",
+    "battlefield_url": "https://www.nps.gov/gett/",
+    "battlefield_site_note": "Barlow's Knoll itself became NPS land in 2020 when the American Battlefield Trust transferred a 35-acre property to Gettysburg National Military Park (https://www.battlefields.org/news/mark-battles-157th-anniversary-american-battlefield-trust-transfers-35-acre-barlows-knoll).",
+    "unit_position_source": "American Battlefield Trust troop-position map: https://www.battlefields.org/learn/maps/gettysburg-fight-barlows-knoll-july-1-1863-245pm-430pm and article https://www.battlefields.org/learn/articles/flank-attack-barlows-knoll — 75th Ohio in von Gilsa's brigade, Barlow's division, on the knoll. Monument (25th & 75th Ohio, East Howard Ave., approx. 39°50'43\"N 77°13'36\"W): https://gettysburg.stonesentinels.com/union-monuments/ohio/25th-75th-ohio/"
   },
   {
     "date": "1863-07-01/1863-07-02",
@@ -765,7 +802,10 @@
     "quote": null,
     "source_note": "On the evening of 2 July 1863 the 75th Ohio, between the 25th Ohio and 17th Connecticut on the brickyard lane at the base of East Cemetery Hill, helped repulse Hays' Louisiana brigade. The regiment lost 186 officers and men at Gettysburg (16 killed, 74 wounded, 96 missing). Sources: Dyer's Compendium / NPS Battle Unit record, 75th Regiment, Ohio Infantry (nps.gov/civilwar UOH0075RI; ohiocivilwar.com/cw75.html); Busey & Martin, Regimental Strengths and Losses at Gettysburg; the 25th/75th Ohio monument on Wainwright Avenue.",
     "nps_unit": "Gettysburg National Military Park",
-    "pending_source": false
+    "pending_source": false,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/East_Cemetery_Hill",
+    "battlefield_url": "https://www.nps.gov/gett/",
+    "unit_position_source": "Monument (25th & 75th Ohio, Wainwright Ave., 39°49.391'N 77°13.712'W) with detailed position markers: HMdb.org #17154, https://www.hmdb.org/m.asp?m=17154 . Narrative and the regiment's official after-action report: https://gettysburg.stonesentinels.com/union-monuments/ohio/25th-75th-ohio/ and https://gettysburg.stonesentinels.com/union-monuments/ohio/25th-75th-ohio/official-report-75th-ohio/"
   },
   {
     "date": "1863-07-02",
