@@ -800,12 +800,13 @@
     "category": "battle",
     "confidence": "high",
     "quote": null,
-    "source_note": "On the evening of 2 July 1863 the 75th Ohio, between the 25th Ohio and 17th Connecticut on the brickyard lane at the base of East Cemetery Hill, helped repulse Hays' Louisiana brigade. The regiment lost 186 officers and men at Gettysburg (16 killed, 74 wounded, 96 missing). Sources: Dyer's Compendium / NPS Battle Unit record, 75th Regiment, Ohio Infantry (nps.gov/civilwar UOH0075RI; ohiocivilwar.com/cw75.html); Busey & Martin, Regimental Strengths and Losses at Gettysburg; the 25th/75th Ohio monument on Wainwright Avenue.",
+    "source_note": "On the evening of 2 July 1863 the 75th Ohio, between the 25th Ohio and 17th Connecticut on the brickyard lane at the base of East Cemetery Hill, helped repulse Hays' Louisiana brigade. The regiment lost 186 officers and men at Gettysburg (16 killed, 74 wounded, 96 missing). Sources: Dyer's Compendium / NPS Battle Unit record, 75th Regiment, Ohio Infantry (nps.gov/civilwar UOH0075RI; ohiocivilwar.com/cw75.html); Busey & Martin, Regimental Strengths and Losses at Gettysburg; the 25th/75th Ohio monument on Wainwright Avenue. A third source, a family remembrance written decades later by a descendant signed \"MEMM\" (ca. 1885-86, quoting an 1883 newspaper account), independently places ERM's wound \"under the locust trees along the NE base of Cemetery Hill\" during the 2nd day's fight -- consistent with this position. See Family History Sources/SarahMonfort/memm_remembrance_transcript.txt.",
     "nps_unit": "Gettysburg National Military Park",
     "pending_source": false,
     "wikipedia_url": "https://en.wikipedia.org/wiki/East_Cemetery_Hill",
     "battlefield_url": "https://www.nps.gov/gett/",
-    "unit_position_source": "Monument (25th & 75th Ohio, Wainwright Ave., 39°49.391'N 77°13.712'W) with detailed position markers: HMdb.org #17154, https://www.hmdb.org/m.asp?m=17154 . Narrative and the regiment's official after-action report: https://gettysburg.stonesentinels.com/union-monuments/ohio/25th-75th-ohio/ and https://gettysburg.stonesentinels.com/union-monuments/ohio/25th-75th-ohio/official-report-75th-ohio/"
+    "unit_position_source": "Monument (25th & 75th Ohio, Wainwright Ave., 39°49.391'N 77°13.712'W) with detailed position markers: HMdb.org #17154, https://www.hmdb.org/m.asp?m=17154 . Narrative and the regiment's official after-action report: https://gettysburg.stonesentinels.com/union-monuments/ohio/25th-75th-ohio/ and https://gettysburg.stonesentinels.com/union-monuments/ohio/25th-75th-ohio/official-report-75th-ohio/ American Battlefield Trust troop-position map of the evening assault: https://www.battlefields.org/learn/maps/gettysburg-east-cemetery-hill-july-2-1863 (XI Corps regiments posted at the base of the hill, overrun by Avery's and Hays' brigades before Carroll's II Corps brigade helped retake it). Narrative: https://www.battlefields.org/learn/articles/east-cemetery-hill",
+    "battlefield_site_note": "For the full Day 2 battle context (Ewell's demonstration, the evening assault by Early's division, and Carroll's counterattack), see Wikipedia, \"Battle of Gettysburg, Second Day\": https://en.wikipedia.org/wiki/Battle_of_Gettysburg,_second_day"
   },
   {
     "date": "1863-07-02",
@@ -839,9 +840,10 @@
     "category": "landmark",
     "confidence": "high",
     "quote": "I have been with Elias this day - he is better, did not think he would live for a day or two past. Have telegraphed but no word from you. He is at the house of Mr. Lightner on Baltimore Pike, 4 miles from Gettysburgh. I look for you ther - he is not with his corps.",
-    "source_note": "Confirmed by a letter from Isaac Watts Monfort to his brother, Rev. Joseph Glass Monfort, dated 11 July 1863 from Gettysburg: \"He is at the house of Mr. Lightner on Baltimore Pike 4 miles from Gettysburgh.\" Also corroborated by the Lightner Farmhouse Bed & Breakfast's own history (a guest room is named for ERM): https://www.lightnerfarmhouse.com/monfort-photos . Address confirmed via Adams County, PA property records (APN 30-G15-0014-000, Mount Joy Township). Original document: iwm_to_jgm_18630711_gettysburg_letter.jpg (Supporting Documents and Files), verified 2026-08-04.",
+    "source_note": "Confirmed by a letter from Isaac Watts Monfort to his brother, Rev. Joseph Glass Monfort, dated 11 July 1863 from Gettysburg: \"He is at the house of Mr. Lightner on Baltimore Pike 4 miles from Gettysburgh.\" Also corroborated by the Lightner Farmhouse Bed & Breakfast's own history (a guest room is named for ERM): https://www.lightnerfarmhouse.com/monfort-photos . Address confirmed via Adams County, PA property records (APN 30-G15-0014-000, Mount Joy Township). Original document: iwm_to_jgm_18630711_gettysburg_letter.jpg (Supporting Documents and Files), verified 2026-08-04. Independently corroborated by a second family source: a remembrance written decades later by a descendant signed \"MEMM\" (ca. 1885-86, quoting an 1883 newspaper account), which recounts that ERM was discovered at the Lightner farmhouse by \"an uncle from the west, who was in the Christian Commission,\" who then had him moved into Gettysburg to recover at a Thompson family home. See Family History Sources/SarahMonfort/memm_remembrance_transcript.txt.",
     "nps_unit": null,
-    "pending_source": false
+    "pending_source": false,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Gettysburg,_second_day"
   },
   {
     "date": "1863-08-12/1863-12-08",
