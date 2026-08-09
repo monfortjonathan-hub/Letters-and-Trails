@@ -39,7 +39,11 @@
   #controls { padding:8px 16px 10px 16px; background:var(--paper-dark); border-top:2px solid var(--line); flex-shrink:0; }
   #controls .row { display:flex; align-items:center; gap:10px; }
   #dateLabel { font-weight:bold; min-width:230px; font-size:12.5px; color:var(--accent); }
-  #slider { flex:1; }
+  #sliderWrap { flex:1; min-width:0; }
+  #slider { width:100%; display:block; }
+  #dateScale { position:relative; height:14px; margin-top:1px; }
+  #dateScale .tick { position:absolute; top:0; transform:translateX(-50%); font-size:9.5px; color:#6b5a1f; white-space:nowrap; }
+  #dateScale .tick::before { content:''; position:absolute; left:50%; top:-4px; width:1px; height:4px; background:#9a8f72; }
   button.ctrl { background:var(--accent); color:white; border:none; border-radius:5px; padding:6px 14px; font-size:13px; cursor:pointer; font-family:inherit; }
   button.ctrl:hover { background:#6e3a20; }
   .legend { font-size:11px; margin-top:10px; line-height:1.85; }
@@ -112,9 +116,14 @@
   </div>
   <div id="controls">
     <div class="row">
+      <button class="ctrl" id="prevBtn" title="Step back one entry">&#9664; Step</button>
       <button class="ctrl" id="playBtn">&#9654; Play journey</button>
+      <button class="ctrl" id="nextBtn" title="Step forward one entry">Step &#9654;</button>
       <span id="dateLabel">Apr 5, 1849</span>
-      <input type="range" id="slider" min="0" max="0" value="0" step="1">
+      <div id="sliderWrap">
+        <input type="range" id="slider" min="0" max="0" value="0" step="1">
+        <div id="dateScale"></div>
+      </div>
       <button class="ctrl" id="resetBtn">Reset</button>
     </div>
   </div>
@@ -330,6 +339,30 @@ const slider = document.getElementById('slider');
 const dateLabel = document.getElementById('dateLabel');
 slider.max = travelPoints.length - 1;
 
+// ---- Date scale beneath the slider: one tick per calendar month covered ----
+function buildDateScale(points) {
+  const el = document.getElementById('dateScale');
+  el.innerHTML = '';
+  const n = points.length;
+  if (n < 2) return;
+  let lastMonth = null;
+  points.forEach((w, i) => {
+    const ym = w.date.slice(0, 7);
+    if (ym !== lastMonth) {
+      const isFirst = lastMonth === null;
+      lastMonth = ym;
+      const d = new Date(w.date + "T12:00:00");
+      const label = d.toLocaleDateString('en-US', { month: 'short', year: (isFirst || d.getMonth() === 0) ? 'numeric' : undefined });
+      const tick = document.createElement('span');
+      tick.className = 'tick';
+      tick.style.left = ((i / (n - 1)) * 100) + '%';
+      tick.textContent = label;
+      el.appendChild(tick);
+    }
+  });
+}
+buildDateScale(travelPoints);
+
 function scrubTo(idx) {
   renderProgress(idx);
   updateMarkerStyles(idx);
@@ -367,6 +400,23 @@ document.getElementById('playBtn').addEventListener('click', function(){
     scrubTo(v);
     // map view is intentionally NOT changed here -- stays fixed on the whole-journey framing
   }, 450);
+});
+
+// ---- Step through / walk through: move one entry at a time ----
+function stepTo(newIdx) {
+  if (playing) { clearInterval(playTimer); playing = false; document.getElementById('playBtn').innerHTML = "&#9654; Play journey"; }
+  newIdx = Math.max(0, Math.min(travelPoints.length - 1, newIdx));
+  slider.value = newIdx;
+  scrubTo(newIdx);
+}
+document.getElementById('prevBtn').addEventListener('click', () => stepTo(parseInt(slider.value) - 1));
+document.getElementById('nextBtn').addEventListener('click', () => stepTo(parseInt(slider.value) + 1));
+document.addEventListener('keydown', (e) => {
+  const tag = (e.target && e.target.tagName) || '';
+  if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+  if (document.getElementById('resModalOverlay').style.display === 'flex') return;
+  if (e.key === 'ArrowRight') stepTo(parseInt(slider.value) + 1);
+  if (e.key === 'ArrowLeft') stepTo(parseInt(slider.value) - 1);
 });
 
 // initial state: everything pale, nothing "reached" yet
