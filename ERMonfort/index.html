@@ -34,8 +34,14 @@
   #controls { padding:8px 16px 10px 16px; background:var(--paper-dark); border-top:2px solid var(--line); flex-shrink:0; }
   #controls .row { display:flex; align-items:center; gap:10px; flex-wrap:nowrap; }
   button.ctrl { flex-shrink:0; white-space:nowrap; }
-  #dateLabel { font-weight:bold; min-width:250px; flex-shrink:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size:12.5px; color:var(--accent); }
-  #sliderWrap { flex:1 1 auto; min-width:120px; }
+  #dateLabel { font-weight:bold; flex:1 1 auto; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size:12.5px; color:var(--accent); }
+  /* Fixed overlay bar for the date slider: sits just under the header, spans only the
+     map's own width, in the gap between the zoom control (top-left) and the layer
+     switcher (top-right). Fixed to the map container, so it never resizes or shifts
+     because of sidebar/button content -- only the map's own width moves it. */
+  #mapTimebar { position:absolute; top:10px; left:64px; right:54px; z-index:900;
+    background:rgba(246,241,230,0.95); border:1px solid var(--line); border-radius:6px;
+    padding:6px 10px 8px 10px; box-shadow:0 1px 4px rgba(0,0,0,.25); }
   #slider { width:100%; display:block; }
   #dateScale { position:relative; height:17px; margin-top:2px; }
   #dateScale .hashtick { position:absolute; top:0; width:1px; height:5px; background:#b3a780; }
@@ -112,7 +118,12 @@
       <h2>Sources</h2>
       <p style="font-size:11px;line-height:1.55;">Route: Dyer's <i>Compendium</i> / NPS battle-unit record for the 6th and 75th Ohio Infantry; Whitelaw Reid, <i>Ohio in the War</i>; E. R. Monfort's own papers (&ldquo;From Grafton to McDowell Through Tygart's Valley,&rdquo; Ohio MOLLUS 1886). Letters: Elias Riggs Monfort Collection, Duggan Library, Hanover College, transcribed by Hanover College students. Confidence is marked honestly on every point; low-confidence points name a place the record does not fix.</p>
     </div>
-    <div id="map"></div>
+    <div id="map">
+      <div id="mapTimebar">
+        <input type="range" id="slider" min="0" max="0" value="0" step="1">
+        <div id="dateScale"></div>
+      </div>
+    </div>
   </div>
   <div id="controls">
     <div class="row">
@@ -120,10 +131,6 @@
       <button class="ctrl" id="playBtn">&#9654; Play the war</button>
       <button class="ctrl" id="nextBtn" title="Step forward one entry">Step &#9654;</button>
       <span id="dateLabel"></span>
-      <div id="sliderWrap">
-        <input type="range" id="slider" min="0" max="0" value="0" step="1">
-        <div id="dateScale"></div>
-      </div>
       <button class="ctrl" id="resetBtn">Reset</button>
     </div>
   </div>
@@ -199,6 +206,11 @@ const satLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/servic
   {maxZoom:18, attribution:'Tiles &copy; Esri'});
 const map = L.map('map',{zoomControl:true, layers:[streetLayer]});
 L.control.layers({"Street":streetLayer,"Topographic":topoLayer,"Satellite":satLayer},{},{position:'topright'}).addTo(map);
+// The date-slider bar overlays the map itself now (fixed to the map's own width,
+// between the zoom control and the layer switcher) -- stop clicks/drags/scroll on it
+// from reaching the map underneath.
+L.DomEvent.disableClickPropagation(document.getElementById('mapTimebar'));
+L.DomEvent.disableScrollPropagation(document.getElementById('mapTimebar'));
 
 const routeLatLngs = waypoints.map(w=>[w.lat,w.lng]);
 L.polyline(routeLatLngs,{color:"#8a8370",weight:3,opacity:0.45}).addTo(map);

@@ -38,8 +38,14 @@
   .badge { display:inline-block; font-size:10.5px; padding:2px 8px; border-radius:10px; color:white; margin-right:6px; }
   #controls { padding:8px 16px 10px 16px; background:var(--paper-dark); border-top:2px solid var(--line); flex-shrink:0; }
   #controls .row { display:flex; align-items:center; gap:10px; flex-wrap:nowrap; }
-  #dateLabel { font-weight:bold; min-width:230px; flex-shrink:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size:12.5px; color:var(--accent); }
-  #sliderWrap { flex:1 1 auto; min-width:120px; }
+  #dateLabel { font-weight:bold; flex:1 1 auto; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size:12.5px; color:var(--accent); }
+  /* Fixed overlay bar for the date slider: sits just under the header, spans only the
+     map's own width, in the gap between the zoom control (top-left) and the layer
+     switcher (top-right). Fixed to the map container, so it never resizes or shifts
+     because of sidebar/button content -- only the map's own width moves it. */
+  #mapTimebar { position:absolute; top:10px; left:64px; right:54px; z-index:900;
+    background:rgba(246,241,230,0.95); border:1px solid var(--line); border-radius:6px;
+    padding:6px 10px 8px 10px; box-shadow:0 1px 4px rgba(0,0,0,.25); }
   #slider { width:100%; display:block; }
   #dateScale { position:relative; height:17px; margin-top:2px; }
   #dateScale .hashtick { position:absolute; top:0; width:1px; height:5px; background:#b3a780; }
@@ -114,7 +120,12 @@
         <div><span class="swatch" style="background:#555;border-top:2px dashed #555;background:none;height:0;"></span>Sea voyage, San Diego &rarr; San Francisco</div>
       </div>
     </div>
-    <div id="map"></div>
+    <div id="map">
+      <div id="mapTimebar">
+        <input type="range" id="slider" min="0" max="0" value="0" step="1">
+        <div id="dateScale"></div>
+      </div>
+    </div>
   </div>
   <div id="controls">
     <div class="row">
@@ -122,10 +133,6 @@
       <button class="ctrl" id="playBtn">&#9654; Play journey</button>
       <button class="ctrl" id="nextBtn" title="Step forward one entry">Step &#9654;</button>
       <span id="dateLabel">Apr 5, 1849</span>
-      <div id="sliderWrap">
-        <input type="range" id="slider" min="0" max="0" value="0" step="1">
-        <div id="dateScale"></div>
-      </div>
       <button class="ctrl" id="resetBtn">Reset</button>
     </div>
   </div>
@@ -179,6 +186,11 @@ const topoLayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png'
 
 const map = L.map('map', { zoomControl: true, layers: [streetLayer] });
 L.control.layers({ "Street": streetLayer, "Satellite": satLayer, "Topographic": topoLayer }, {}, {position:'topright'}).addTo(map);
+// The date-slider bar overlays the map itself now (fixed to the map's own width,
+// between the zoom control and the layer switcher) -- stop clicks/drags/scroll on it
+// from reaching the map underneath.
+L.DomEvent.disableClickPropagation(document.getElementById('mapTimebar'));
+L.DomEvent.disableScrollPropagation(document.getElementById('mapTimebar'));
 
 // Keep hover tooltips fully inside the visible map, regardless of zoom/pan or window size.
 // Leaflet's tooltip "direction" is static once bound, so we recompute it on every hover
