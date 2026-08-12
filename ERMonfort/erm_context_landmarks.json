@@ -1,0 +1,18 @@
+[
+  {
+    "place_name": "Manassas Junction / First Bull Run battlefield, Va.",
+    "lat": 38.8138,
+    "lng": -77.5211,
+    "note": "Site of the First Battle of Bull Run (21 July 1861) -- fought while Elias's own 6th Ohio was away in the Cheat Mountain / Laurel Hill campaign in western Virginia, so he was not part of it. He passed directly through the site over a year later: his letter of 6 Nov. 1862 records, \"We left Centerville on Sunday Morning camped at Manassas junction.\"",
+    "mentioned_in_letter_date": "1862-11-06",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/First_Battle_of_Bull_Run"
+  },
+  {
+    "place_name": "Fredericksburg battlefield, Va.",
+    "lat": 38.3036,
+    "lng": -77.4603,
+    "note": "Site of the Battle of Fredericksburg (11-15 Dec. 1862). Elias's 75th Ohio was not engaged there, but camped six miles away days afterward. His letter of 19 Dec. 1862 (the transcript itself misheads it \"/61\"; content places it unambiguously in 1862) says: \"We are now at Staffords C.H. 6 miles from Fredricksburgh from which place we have just arrived... there are thousands lying on the Battle field of Fredricksburgh who suffer more than tongues can tell.\"",
+    "mentioned_in_letter_date": "1862-12-19",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Fredericksburg"
+  }
+]

@@ -37,14 +37,16 @@
   .detail-resources a, .res-link { color:var(--accent2); cursor:pointer; text-decoration:underline; display:block; margin:3px 0; }
   .badge { display:inline-block; font-size:10.5px; padding:2px 8px; border-radius:10px; color:white; margin-right:6px; }
   #controls { padding:8px 16px 10px 16px; background:var(--paper-dark); border-top:2px solid var(--line); flex-shrink:0; }
-  #controls .row { display:flex; align-items:center; gap:10px; }
-  #dateLabel { font-weight:bold; min-width:230px; font-size:12.5px; color:var(--accent); }
-  #sliderWrap { flex:1; min-width:0; }
+  #controls .row { display:flex; align-items:center; gap:10px; flex-wrap:nowrap; }
+  #dateLabel { font-weight:bold; min-width:230px; flex-shrink:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size:12.5px; color:var(--accent); }
+  #sliderWrap { flex:1 1 auto; min-width:120px; }
   #slider { width:100%; display:block; }
-  #dateScale { position:relative; height:14px; margin-top:1px; }
-  #dateScale .tick { position:absolute; top:0; transform:translateX(-50%); font-size:9.5px; color:#6b5a1f; white-space:nowrap; }
-  #dateScale .tick::before { content:''; position:absolute; left:50%; top:-4px; width:1px; height:4px; background:#9a8f72; }
-  button.ctrl { background:var(--accent); color:white; border:none; border-radius:5px; padding:6px 14px; font-size:13px; cursor:pointer; font-family:inherit; }
+  #dateScale { position:relative; height:17px; margin-top:2px; }
+  #dateScale .hashtick { position:absolute; top:0; width:1px; height:5px; background:#b3a780; }
+  #dateScale .hashtick.yr { height:9px; width:1.5px; background:#6b5a1f; }
+  #dateScale .tick { position:absolute; top:6px; transform:translateX(-50%); font-size:9px; color:#6b5a1f; white-space:nowrap; }
+  #dateScale .tick.yr { font-weight:bold; color:var(--accent); font-size:10px; }
+  button.ctrl { background:var(--accent); color:white; border:none; border-radius:5px; padding:6px 14px; font-size:13px; cursor:pointer; font-family:inherit; flex-shrink:0; white-space:nowrap; }
   button.ctrl:hover { background:#6e3a20; }
   .legend { font-size:11px; margin-top:10px; line-height:1.85; }
   .legend .dot { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:6px; vertical-align:middle; }
@@ -339,7 +341,10 @@ const slider = document.getElementById('slider');
 const dateLabel = document.getElementById('dateLabel');
 slider.max = travelPoints.length - 1;
 
-// ---- Date scale beneath the slider: one tick per calendar month covered ----
+// ---- Date scale beneath the slider: a small hash tick for every calendar month
+// covered (so density is always visible), with text labels only quarterly
+// (Jan/Apr/Jul/Oct) to keep them from overlapping. January's label is replaced by
+// the year number, which doubles as the year marker. ----
 function buildDateScale(points) {
   const el = document.getElementById('dateScale');
   el.innerHTML = '';
@@ -348,15 +353,26 @@ function buildDateScale(points) {
   let lastMonth = null;
   points.forEach((w, i) => {
     const ym = w.date.slice(0, 7);
-    if (ym !== lastMonth) {
-      const isFirst = lastMonth === null;
-      lastMonth = ym;
-      const d = new Date(w.date + "T12:00:00");
-      const label = d.toLocaleDateString('en-US', { month: 'short', year: (isFirst || d.getMonth() === 0) ? 'numeric' : undefined });
+    if (ym === lastMonth) return;
+    lastMonth = ym;
+    const d = new Date(w.date + "T12:00:00");
+    const month = d.getMonth(); // 0-11
+    const isYearStart = month === 0;
+    const isQuarter = (month % 3) === 0;
+    const left = ((i / (n - 1)) * 100) + '%';
+
+    const hash = document.createElement('span');
+    hash.className = 'hashtick' + (isYearStart ? ' yr' : '');
+    hash.style.left = left;
+    el.appendChild(hash);
+
+    if (isQuarter) {
       const tick = document.createElement('span');
-      tick.className = 'tick';
-      tick.style.left = ((i / (n - 1)) * 100) + '%';
-      tick.textContent = label;
+      tick.className = 'tick' + (isYearStart ? ' yr' : '');
+      tick.style.left = left;
+      tick.textContent = isYearStart
+        ? d.toLocaleDateString('en-US', { year: 'numeric' })
+        : d.toLocaleDateString('en-US', { month: 'short' });
       el.appendChild(tick);
     }
   });
